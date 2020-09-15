@@ -232,7 +232,7 @@ nmea_process(char *a)
 	char *csum;
 	int cnt, i;
 
-	if (strncmp(a, "$GP", 3))
+	if (strncmp(a, "$GP", 3) || strncmp(a, "$GN", 3))
 		return;
 
 	a++;
